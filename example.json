@@ -1,0 +1,9 @@
+// course.json
+
+"_tilesMenu": {
+    "_gotoPageone": true,
+    "_graphic": {
+        "src": "assets/example.png",
+        "alt": ""
+    },
+}

@@ -1,0 +1,105 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/contentobject/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "Menu",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    },
+    "durationLabel": {
+      "type": "string",
+      "required": true,
+      "default": "Duration:",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    },
+    "menuItem": {
+      "type": "string",
+      "required": true,
+      "default": "Menu item.",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    },
+    "menuEnd": {
+      "type": "string",
+      "required": true,
+      "default": "You have reached the end of the menu.",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "pluginLocations": {
+      "type":"object",
+      "required":true,
+      "properties":{
+        "config": {
+          "type":"object"
+        },
+        "course": {
+          "type": "object",
+          "properties": {
+            "_tilesMenu": {
+              "type": "object",
+              "legend": "Tile Menu",
+              "properties": {
+                "_gotoPageone": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "Check on so that menu won't launch at Page 1.",
+                  "inputType": {"type": "Boolean", "options": [true, false]},
+                  "validators": []
+                },
+                "_graphic": {
+                  "type":"object",
+                  "required":false,
+                  "title": "Optional graphic",
+                  "properties":{
+                    "alt": {
+                      "type":"string",
+                      "required":false,
+                      "default": "",
+                      "title": "Alt text",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": "Text for the alt attribute of this image",
+                      "translatable": true
+                    },
+                    "src": {
+                      "type":"string",
+                      "required":false,
+                      "default": "",
+                      "inputType": "Asset:image",
+                      "validators": []
+                    }
+                  }
+                }           
+              }
+            }
+          }
+        },
+        "contentobject": {
+          "type":"object"
+        },
+        "article": {
+          "type":"object"
+        },
+        "block": {
+          "type":"object"
+        },
+        "component": {
+          "type":"object"
+        }
+      }
+    }
+  }
+}
